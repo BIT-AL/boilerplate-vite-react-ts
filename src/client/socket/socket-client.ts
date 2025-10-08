@@ -1,6 +1,6 @@
-import { io } from 'socket.io-client';
+import io from 'socket.io-client';
 import { SOCKET_URL } from '../../config';
-import { store } from '../../store/redux';
+import { store } from '../../stores/redux';
 
 interface Test {
   test: { val: string };

@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { APP_URL, AXIOS_TIMEOUT_DURATION } from '../../config';
-import { store } from '../../store/redux';
-import { deleteUser } from '../../store/redux/slices/auth';
+import { store } from '../../stores/redux';
+import { deleteUser } from '../../stores/redux/slices/auth';
 
 const instance = axios.create({
   baseURL: APP_URL,
@@ -21,7 +21,7 @@ instance.interceptors.request.use(
 
     return config;
   },
-  (error: AxiosError) => Promise.reject(error),
+  (error: AxiosError) => Promise.reject(error)
 );
 
 instance.interceptors.response.use(
@@ -32,7 +32,7 @@ instance.interceptors.response.use(
     }
 
     return Promise.reject(error);
-  },
+  }
 );
 
 export class HttpClient {
