@@ -6,6 +6,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Loading from './components/Loading/Loading';
 import { AuthProvider } from './contexts/AuthContext';
+import { StoreProvider } from './contexts/StoreContext';
+import { TranslateProvider } from './contexts/TranslateContext';
 import Router from './router';
 import { persistor, store } from './stores/redux';
 
@@ -25,11 +27,15 @@ const App = () => {
         <PersistGate loading={<Loading />} persistor={persistor}>
           <AuthProvider>
             <QueryClientProvider client={reactQueryClient}>
-              <ConfigProvider theme={themeConfig}>
-                <BrowserRouter>
-                  <Router />
-                </BrowserRouter>
-              </ConfigProvider>
+              <TranslateProvider>
+                <StoreProvider>
+                  <ConfigProvider theme={themeConfig}>
+                    <BrowserRouter>
+                      <Router />
+                    </BrowserRouter>
+                  </ConfigProvider>
+                </StoreProvider>
+              </TranslateProvider>
             </QueryClientProvider>
           </AuthProvider>
         </PersistGate>

@@ -1,13 +1,13 @@
-import { useContext } from 'react'
+import { useContext } from 'react';
 
-import { AuthContext } from '../contexts/AuthContext'
+import { AuthContext } from '../contexts/AuthContext';
 
 const useAuth = () => {
-  const context = useContext(AuthContext)
+  const context = useContext(AuthContext);
 
-  if (!context) throw new Error('useAuth must be used iniside AuthProvider')
+  if (!context) throw new Error('useAuth must be used iniside AuthProvider');
 
-  return context
-}
+  return context;
+};
 
-export default useAuth
+export default useAuth;

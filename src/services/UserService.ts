@@ -1,8 +1,8 @@
-import { HttpClient } from '../client/http/http-client'
-import { User } from '../types/user'
+import { HttpClient } from '../client/http/http-client';
+import { User } from '../types/user';
 
 class UserService {
-  getUser = async () => await HttpClient.get<User>('/User')
+  getUser = async () => await HttpClient.get<User>('/User');
 }
 
-export default new UserService()
+export default new UserService();

@@ -1,9 +1,9 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent } from 'react';
 
 interface RegisterPageProps {}
 
 const RegisterPage: FunctionComponent<RegisterPageProps> = ({}) => {
-  return <h1>Register page</h1>
-}
+  return <h1>Register page</h1>;
+};
 
-export default RegisterPage
+export default RegisterPage;
