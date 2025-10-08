@@ -10,8 +10,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --max-warnings=0 && tsc --noEmit",
     "preview": "vite preview",
-    "test": "yarn lint && vitest",
-    "prepare": "husky install"
+    "test": "yarn lint && vitest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.0",
@@ -43,7 +42,6 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-config-react-tracktor": "^1.5.0",
     "eslint-plugin-prettier": "^5.5.4",
-    "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "prettier": "^3.6.2",
     "typescript": "^4.9.5",
