@@ -21,7 +21,7 @@
   "rules": {
     /* --- General Code Quality --- */
     "no-empty-pattern": "off",
-    "no-console": "warn",
+    "no-console": "off",
     "no-debugger": "warn",
 
     /* --- React Rules --- */
@@ -39,16 +39,7 @@
     "@typescript-eslint/no-unused-vars": "off",
 
     /* --- Prettier Integration --- */
-    "prettier/prettier": [
-      "warn",
-      {
-        "endOfLine": "auto",
-        "singleQuote": true,
-        "semi": true,
-        "printWidth": 100,
-        "trailingComma": "all"
-      }
-    ]
+    "prettier/prettier": "off"
   },
   "settings": {
     "react": {
